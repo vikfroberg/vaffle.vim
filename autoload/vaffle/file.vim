@@ -129,7 +129,7 @@ endfunction
 
 function! vaffle#file#move(filer, items, dst_name) abort
   let dst_dir = vaffle#util#normalize_path(printf('%s/%s',
-        \ a:filer.dir,
+        \ getcwd(),
         \ a:dst_name))
 
   if !isdirectory(dst_dir)
